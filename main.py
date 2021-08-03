@@ -8,12 +8,13 @@ from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
-from os import urandom
+# from os import urandom
 from functools import wraps
 from sqlalchemy.ext.declarative import declarative_base
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = urandom(16)
+# app.config['SECRET_KEY'] = urandom(16)
+app.config['SECRET_KEY'] = 'fGKwTyKP9Eu6K5TWZQ7TAA=='
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager()
